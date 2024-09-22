@@ -33,7 +33,7 @@
     <header class="bg-[#F9F7F3]">
       <nav class="container mx-auto flex justify-between items-center pt-5 pb-8 md:pb-14 bg-[#F9F7F3]">
 
-        <button class="btn bg-btn_primary md:text-xl font-semibold">Blog</button>
+        <button id="blog" class="btn bg-btn_primary md:text-xl font-semibold">Blog</button>
 
         <div class="flex items-center">
           <img class="w-[30px] md:w-auto" src="./assets/logo.png" alt="">
@@ -65,7 +65,7 @@
           <div class="w-full md:w-[55%]">
 
             <!-- BDT button -->
-            <button class="bg-gray-200 rounded-md mb-5 flex items-center p-3">
+            <button class="bg-gray-100 rounded-md mb-5 flex items-center p-3">
               <img src="./assets/coin.png" alt="">
               <p class="text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
             </button>
@@ -100,6 +100,7 @@
           </div>
         </div>
       </section>
+
       <!-- cards: -2 -->
       <section class="border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
@@ -171,5 +172,11 @@
       
 
     </main>
+
+    <script>
+      document.getElementById("blog").addEventListener("click",function(){
+        window.location.href = "blog.html";
+      })
+    </script>
 </body>
 </html>
