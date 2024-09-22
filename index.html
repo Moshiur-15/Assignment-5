@@ -55,7 +55,7 @@
     <!-- main section -->
     <main class="container mx-auto space-y-5">
       <!-- cards: -1 -->
-        <section class="border rounded-xl p-7 m-5 md:m-0">
+      <section class="border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
           <figure class="mb-8 md:mb-0">
             <img class="w-full"
@@ -80,14 +80,28 @@
 
             <!-- Donate Now button -->
             <div class="card-actions mt-5">
-              <button class="btn bg-btn_primary w-full md:text-xl font-semibold">Donate Now</button>
+              <button  onclick="my_modal_1.showModal()" class="btn bg-btn_primary w-full md:text-xl font-semibold">Donate Now</button>
+
+              <!-- susses -->
+              <dialog id="my_modal_1" class="modal ">
+                <div class="modal-box flex text-center flex-col space-y-6">
+                  <h1 class="text-3xl mb-3 font-extrabold">Congrates!</h1>
+                  <img class="w-[10%] mx-auto" src="./assets/coin.png" alt="">
+                  <p class="font-light text-[16px]">You Have Donated For Humankind</p>
+                  <h3 class="text-xl font-bold mt-5">Successfully</h3>
+                  <form method="dialog" class="flex justify-center ">
+                    <button class="btn">close confirmation</button>
+                  </form>
+                </div>
+              </dialog>
+
             </div>
 
           </div>
         </div>
-        </section>
+      </section>
       <!-- cards: -2 -->
-        <section class="border rounded-xl p-7 m-5 md:m-0">
+      <section class="border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
           <figure class="mb-8 md:mb-0">
             <img class="w-full"
@@ -117,10 +131,10 @@
 
           </div>
         </div>
-        </section>
+      </section>
 
       <!-- cards: -3 -->
-        <section class="border rounded-xl p-7 m-5 md:m-0">
+      <section class="border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
           <figure class="mb-8 md:mb-0">
             <img class="w-full"
@@ -150,7 +164,11 @@
 
           </div>
         </div>
-        </section>
+      </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+
+      
 
     </main>
 </body>
