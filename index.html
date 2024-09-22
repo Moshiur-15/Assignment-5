@@ -31,31 +31,33 @@
 <body class="font-Lexend">
   <!-- header section -->
     <header class="bg-[#F9F7F3]">
-      <nav class="container mx-auto flex justify-between items-center pt-5 pb-8 md:pb-14 bg-[#F9F7F3]">
+      <nav class="container mx-auto flex justify-between items-center pt-5 pb-10 md:pb-14 px-5 lg:px-0">
 
         <button id="blog" class="btn bg-btn_primary md:text-xl font-semibold">Blog</button>
 
-        <div class="flex items-center">
-          <img class="w-[30px] md:w-auto" src="./assets/logo.png" alt="">
-          <p class=" md:text-xl font-semibold md:ml-4">Donate Bangladesh</p>
+        <div class="hidden md:block">
+          <div class="flex items-center">
+            <img class="w-[30px] md:w-auto" src="./assets/logo.png" alt="">
+            <p class=" md:text-xl font-semibold md:ml-4">Donate Bangladesh</p>
+          </div>
         </div>
 
         <div class="flex items-center">
           <img src="./assets/coin.png" alt="">
-          <p class="text-xl font-medium md:ml-4"><span class="md:mr-3">*****</span>BDT</p>
+          <p class="md:text-xl font-medium ml-4"><span class="mr-3 ">10000</span>BDT</p>
         </div>
-      </nav>
+      </nav>    
     </header>
     <!-- donation / history button -->
-    <div class="flex justify-center my-6 md:my-16">
-      <button class="bg-btn_primary btn mr-4 md:text-xl font-semibold">Donation</button>
-      <button class="btn border border-gray-400 md:text-xl font-semibold">History</button>
+    <div class="flex justify-center mt-10 mb-5 md:mt-20 md:mb-7">
+      <button class="bg-btn_primary py-3 px-7 rounded-lg  mr-4 md:text-xl font-semibold">Donation</button>
+      <button class="py-3 px-7 rounded-lg border border-gray-400 md:text-xl font-semibold">History</button>
     </div>
 
     <!-- main section -->
     <main class="container mx-auto space-y-5">
       <!-- cards: -1 -->
-      <section class="border rounded-xl p-7 m-5 md:m-0">
+      <section class=" border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
           <figure class="mb-8 md:mb-0">
             <img class="w-full"
@@ -67,7 +69,7 @@
             <!-- BDT button -->
             <button class="bg-gray-100 rounded-md mb-5 flex items-center p-3">
               <img src="./assets/coin.png" alt="">
-              <p class="text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
+              <p class="md:text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
             </button>
 
             <h1 class="font-bold text-[18px] md:text-xl">
@@ -102,7 +104,7 @@
       </section>
 
       <!-- cards: -2 -->
-      <section class="border rounded-xl p-7 m-5 md:m-0">
+      <section class=" border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
           <figure class="mb-8 md:mb-0">
             <img class="w-full"
@@ -114,7 +116,7 @@
             <!-- BDT button -->
             <button class="bg-gray-200 rounded-md mb-5 flex items-center p-3">
               <img src="./assets/coin.png" alt="">
-              <p class="text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
+              <p class="md:text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
             </button>
 
             <h1 class="font-bold text-[18px] md:text-xl">
@@ -135,7 +137,7 @@
       </section>
 
       <!-- cards: -3 -->
-      <section class="border rounded-xl p-7 m-5 md:m-0">
+      <section class=" border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
           <figure class="mb-8 md:mb-0">
             <img class="w-full"
@@ -147,7 +149,7 @@
             <!-- BDT button -->
             <button class="bg-gray-200 rounded-md mb-5 flex items-center p-3">
               <img src="./assets/coin.png" alt="">
-              <p class="text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
+              <p class="md:text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
             </button>
 
             <h1 class="font-bold text-[18px] md:text-xl">
@@ -167,16 +169,14 @@
         </div>
       </section>
 
-      <!-- Open the modal using ID.showModal() method -->
 
-      
-
+      <!-- section -->
+      <section class="hidden border p-6 rounded-xl mx-5 lg:mx-0">
+          <h2 class="font-bold text-[16px] md:text-xl mb-4">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+          <p class="font-light text-xs md:text-[16px]">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+      </section>
     </main>
 
-    <script>
-      document.getElementById("blog").addEventListener("click",function(){
-        window.location.href = "blog.html";
-      })
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

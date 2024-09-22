@@ -10,68 +10,87 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!--font awesome -->
     <script src="https://kit.fontawesome.com/233bd69685.js" crossorigin="anonymous"></script>
+
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              btn_primary: '#B4F461',
+            },
+            fontFamily:{
+              Lexend:["Lexend", "sans-serif"],
+            }
+          }
+        }
+      }
+    </script>
  
 </head>
 
-<body class="">
+<body class="font-lexend">
 
   <header class="bg-[#F9F7F3]">
-    <nav class="container mx-auto flex justify-between items-center pt-5 pb-8 md:pb-14">
-  
+    <nav class="container mx-auto flex justify-between items-center pt-5 pb-10 md:pb-14 px-5 lg:px-0">
+
       <button id="home" class="btn bg-[#B4F461] md:text-xl font-semibold">home</button>
-  
-      <div class="flex items-center">
-        <img class="w-[30px] md:w-auto" src="./assets/logo.png" alt="">
-        <p class=" md:text-xl font-semibold md:ml-4">Donate Bangladesh</p>
+
+      <div class="hidden md:block">
+        <div class="flex items-center">
+          <img class="w-[30px] md:w-auto" src="./assets/logo.png" alt="">
+          <p class=" md:text-xl font-semibold md:ml-4">Donate Bangladesh</p>
+        </div>
       </div>
-  
+
       <div class="flex items-center">
         <img src="./assets/coin.png" alt="">
-        <p class="text-xl font-medium md:ml-4"><span class="md:mr-3">*****</span>BDT</p>
+        <p class="md:text-xl font-medium ml-4"><span class="mr-3">10000</span>BDT</p>
       </div>
     </nav>
   </header>
-
-  <section class="container mx-auto">
-    <div class="text-2xl md:text-4xl font-extrabold my-10 flex items-center">
-      <h1 class="mr-6">Important FAQ</h1>
-      <i class="fa-solid fa-question"></i>
-    </div>
-    <div class="join join-vertical w-full">
-      <div class="collapse collapse-arrow join-item border-base-300 border">
-        <input type="radio" name="my-accordion-4" checked="checked" />
-        <div class="collapse-title text-xl font-medium">What is the appendchild at the Dome?</div>
-        <div class="collapse-content">
-          <p>appendChild is a JavaScript method used to add a new child node to the end of a parent node. It allows you to dynamically insert elements into an HTML document.</p>
-        </div>
+  <!-- quiescence part  -->
+  <section class="mx-5">
+    <div class="container mx-auto">
+      <div class="text-2xl md:text-4xl font-extrabold my-10 flex items-center">
+        <h1 class="mr-6">Important FAQ</h1>
+        <i class="fa-solid fa-question"></i>
       </div>
-
-      <div class="collapse collapse-arrow join-item border-base-300 border">
-        <input type="radio" name="my-accordion-4" />
-        <div class="collapse-title text-xl font-medium">What is the classlist at the Dome?</div>
-        <div class="collapse-content">
-          <p>The classList property in the DOM (Document Object Model) is used to manipulate the class attribute of an HTML element.</p>
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is the appendchild at the Dome?</div>
+          <div class="collapse-content">
+            <p>appendChild is a JavaScript method used to add a new child node to the end of a parent node. It allows you to dynamically insert elements into an HTML document.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="collapse collapse-arrow join-item border-base-300 border">
-        <input type="radio" name="my-accordion-4" />
-        <div class="collapse-title text-xl font-medium">What is the event at the Dome?</div>
-        <div class="collapse-content">
-          <p>An event in programming, especially in the context of web development and the DOM (Document Object Model), refers to any interaction or occurrence that happens in the browser or on a web page.</p>
+  
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is the classlist at the Dome?</div>
+          <div class="collapse-content">
+            <p>The classList property in the DOM (Document Object Model) is used to manipulate the class attribute of an HTML element.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="collapse collapse-arrow join-item border-base-300 border">
-        <input type="radio" name="my-accordion-4" />
-        <div class="collapse-title text-xl font-medium">What is the addEventListener at the Dome?</div>
-        <div class="collapse-content">
-          <p>addEventListener is a method in JavaScript that allows you to attach an event handler to a specific DOM element.</p>
+  
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is the event at the Dome?</div>
+          <div class="collapse-content">
+            <p>An event in programming, especially in the context of web development and the DOM (Document Object Model), refers to any interaction or occurrence that happens in the browser or on a web page.</p>
+          </div>
+        </div>
+  
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is the addEventListener at the Dome?</div>
+          <div class="collapse-content">
+            <p>addEventListener is a method in JavaScript that allows you to attach an event handler to a specific DOM element.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <script>
     document.getElementById("home").addEventListener("click",function(){
