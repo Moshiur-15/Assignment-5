@@ -39,33 +39,71 @@ document.getElementById("blog").addEventListener("click",function(){
     window.location.href = "blog.html";
 })
 
+
+
 // donate
-const donateButton = document.getElementById("donate-button"); 
-
+const donateButton = document.getElementById("donate-button");
 donateButton.addEventListener('click',function(){
-    const donateField = getInputId("input-donate");
-    const totalBDTAmount = getInnertext("BDT-amount");
-    const totalBalance = getInnertext("total-balance");
+    donateFun("BDTAmount","inputDonate","Donate for Flood at Noakhali, Bangladesh")
+});
+const donateButton2 = document.getElementById("donate-button-2");
+donateButton2.addEventListener('click',function(){
+    donateFun("BDTAmount2","inputDonate2","Donate for Flood Relief in Feni,Bangladesh")
+});
+const donateButton3 = document.getElementById("donate-button-3");
+donateButton3.addEventListener('click',function(){
+    donateFun("BDTAmount3","inputDonate3","Aid for Injured in the Quota Movement")
+});
 
-    if(isNaN(donateField) || donateField<=0){
+
+function donateFun(BDTAmountPara, inputDonatePara, historyTitle){
+    const inputDonate = getInputId(inputDonatePara);
+    const BDTAmount = getInputId(BDTAmountPara);
+    const totalBalance = getInputId("totalBalance");
+
+    // add btn amount
+    const totalInputDonate = parseFloat(inputDonate.value);
+    const totalBDTAmount = parseFloat(BDTAmount.innerText);
+    const totalBalanceValue = parseFloat(totalBalance.innerText);
+
+    if(isNaN(totalInputDonate)){
         alert("Please enter a valid amount");
         return;
     }
-    const addDonate = donateField + totalBDTAmount;
-    const losBalance = totalBalance - donateField;
+    if(totalBalanceValue < totalInputDonate){
+        alert("Please enter a valid amount");
+        return;
+    }
+    if(totalInputDonate < 0){
+        alert("Please enter a valid amount");
+        return
+    }
+    // Model
+    my_modal_1.showModal();
 
-    // add btn amount
-    const totalAddDonate = document.getElementById("BDT-amount");
-    totalAddDonate.innerText = addDonate;
-    const totalLosBalance = document.getElementById("total-balance");
-    totalLosBalance.innerText = losBalance;
+    const history = getInputId("historyHidden");
+    history.innerHTML += `
+    <div class= "my-5 border py-6 px-8 rounded-lg">
+    <p class="font-bold pb-3">${totalInputDonate} taka is ${historyTitle}</p>
+    <p class="text-gray-600">Date : ${new Date}</p>
+    </div>
+    `
+
+
+
+    const addDonate = totalInputDonate + totalBDTAmount;
+    BDTAmount.innerText = addDonate;
+
+    const losBalance = totalBalanceValue - totalInputDonate;
+    totalBalance.innerText = losBalance;
     
-});
+}
 
-// function
+
 function getInputId(id){
-    return parseFloat(document.getElementById(id).value).toFixed(2);
+    let value = document.getElementById(id);
+    return value;
 }
-function getInnertext(id){
-    return parseFloat(document.getElementById(id).innerText);
-}
+
+// pojition problam
+// if else problam acha
