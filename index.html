@@ -44,18 +44,18 @@
 
         <div class="flex items-center">
           <img src="./assets/coin.png" alt="">
-          <p class="md:text-xl font-medium ml-4"><span class="mr-3 ">10000</span>BDT</p>
+          <p class="md:text-xl font-medium ml-4"><span id="total-balance" class="mr-3 ">10000</span>BDT</p>
         </div>
       </nav>    
     </header>
     <!-- donation / history button -->
     <div class="flex justify-center mt-10 mb-5 md:mt-20 md:mb-7">
-      <button class="bg-btn_primary py-3 px-7 rounded-lg  mr-4 md:text-xl font-semibold">Donation</button>
-      <button class="py-3 px-7 rounded-lg border border-gray-400 md:text-xl font-semibold">History</button>
+      <button id="donation-btn" class="bg-btn_primary py-3 px-7 rounded-lg  mr-4 md:text-xl font-semibold">Donation</button>
+      <button id="history-btn" class="py-3 px-7 rounded-lg border border-gray-400 md:text-xl font-semibold">History</button>
     </div>
 
     <!-- main section -->
-    <main class="container mx-auto space-y-5">
+    <main id="main" class="container mx-auto space-y-5">
       <!-- cards: -1 -->
       <section class=" border rounded-xl p-7 m-5 md:m-0">
         <div class="flex justify-between items-center flex-col md:flex-row">
@@ -69,7 +69,7 @@
             <!-- BDT button -->
             <button class="bg-gray-100 rounded-md mb-5 flex items-center p-3">
               <img src="./assets/coin.png" alt="">
-              <p class="md:text-xl font-medium text-gray-500 md:ml-4"><span class="md:mr-3">0</span>BDT</p>
+              <p class="md:text-xl font-medium text-gray-500 md:ml-4"><span id="BDT-amount" class="md:mr-3">0</span>BDT</p>
             </button>
 
             <h1 class="font-bold text-[18px] md:text-xl">
@@ -78,24 +78,11 @@
             <p class=" text-[14px] md:text-[16px] font-light mt-5 mb-10">
                The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
             </p>          
-            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full px-5 py-7 border-gray-200"/>
+            <input id="input-donate" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full px-5 py-7 border-gray-200"/>
 
             <!-- Donate Now button -->
             <div class="card-actions mt-5">
-              <button  onclick="my_modal_1.showModal()" class="btn bg-btn_primary w-full md:text-xl font-semibold">Donate Now</button>
-
-              <!-- susses -->
-              <dialog id="my_modal_1" class="modal ">
-                <div class="modal-box flex text-center flex-col space-y-6">
-                  <h1 class="text-3xl mb-3 font-extrabold">Congrates!</h1>
-                  <img class="w-[10%] mx-auto" src="./assets/coin.png" alt="">
-                  <p class="font-light text-[16px]">You Have Donated For Humankind</p>
-                  <h3 class="text-xl font-bold mt-5">Successfully</h3>
-                  <form method="dialog" class="flex justify-center ">
-                    <button class="btn">close confirmation</button>
-                  </form>
-                </div>
-              </dialog>
+              <button id="donate-button" class="btn bg-btn_primary w-full md:text-xl font-semibold">Donate Now</button>
 
             </div>
 
@@ -168,15 +155,15 @@
           </div>
         </div>
       </section>
-
-
-      <!-- section -->
-      <section class="hidden border p-6 rounded-xl mx-5 lg:mx-0">
+    </main>
+    <!-- section -->
+    <section  class="mx-5 md:mx-0">
+        <div  id="historyHidden" class="hidden container lg:mx-auto border p-6 rounded-xl">
           <h2 class="font-bold text-[16px] md:text-xl mb-4">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
           <p class="font-light text-xs md:text-[16px]">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-      </section>
-    </main>
-
+        </div>
+    </section>
+    
     <script src="./js/script.js"></script>
 </body>
 </html>
