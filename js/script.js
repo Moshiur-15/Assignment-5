@@ -1,3 +1,9 @@
+// blog button conect
+document.getElementById("blog").addEventListener("click",function(){
+    window.location.href = "blog.html";
+});
+
+
 // navbar pojitoin 
 const Navbar = document.getElementById("Navbar");
 const Nav = document.getElementById("Nav");
@@ -11,14 +17,6 @@ window.addEventListener('scroll', function(){
         Navbar.classList.remove("backdrop-blur-md")
     }
 })
-
-
-
-// blog button conect
-document.getElementById("blog").addEventListener("click",function(){
-    window.location.href = "blog.html";
-})
-
 
 
 // history and donation button
@@ -86,14 +84,17 @@ function donateFun(BDTAmountPara, inputDonatePara, historyTitle){
 
     if(isNaN(totalInputDonate)){
         alert("Please give the number");
+        inputDonate.value = " "
         return;
     }
     if(totalBalanceValue < totalInputDonate){
         alert("There is not enough money in the account");
+        inputDonate.value = " "
         return;
     }
     if(totalInputDonate < 0){
         alert("Please give positive number");
+        inputDonate.value = " "
         return
     }
 
@@ -114,6 +115,8 @@ function donateFun(BDTAmountPara, inputDonatePara, historyTitle){
 
     const losBalance = totalBalanceValue - totalInputDonate;
     totalBalance.innerText = losBalance.toFixed(2);
+
+    inputDonate.value = " "
     
 }
 
