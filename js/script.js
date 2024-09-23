@@ -1,3 +1,26 @@
+// navbar pojitoin 
+const Navbar = document.getElementById("Navbar");
+const Nav = document.getElementById("Nav");
+
+window.addEventListener('scroll', function(){
+    if(window.scrollY > 0){
+        Nav.classList.add('bg-opacity-40')
+        Navbar.classList.add("backdrop-blur-md")
+    }else{
+        Nav.classList.remove('bg-opacity-40');
+        Navbar.classList.remove("backdrop-blur-md")
+    }
+})
+
+
+
+// blog button conect
+document.getElementById("blog").addEventListener("click",function(){
+    window.location.href = "blog.html";
+})
+
+
+
 // history and donation button
 const main = document.getElementById("main");
 const historyBtnDesign = document.getElementById("history-btn")
@@ -12,7 +35,7 @@ historyBtnDesign.addEventListener('click',function(){
         'bg-btn_primary',
         'border-none'
     )
-    donationBtnDesign.classList.add('border', 'border-gray-400');
+    donationBtnDesign.classList.add('border', 'border-gray-200');
     main.classList.add("hidden");
     historyHidden.classList.remove("hidden");
   
@@ -27,21 +50,16 @@ historyBtnDesign.addEventListener('click',function(){
         'bg-btn_primary',
         'border-none'
     )
-    donationBtnDesign.classList.remove('border', 'border-gray-400');
+    donationBtnDesign.classList.remove('border', 'border-gray-200');
     main.classList.remove("hidden")
     historyHidden.classList.add("hidden");
   
   
 });
 
-// blog button conect
-document.getElementById("blog").addEventListener("click",function(){
-    window.location.href = "blog.html";
-})
 
 
-
-// donate
+// donation add
 const donateButton = document.getElementById("donate-button");
 donateButton.addEventListener('click',function(){
     donateFun("BDTAmount","inputDonate","Donate for Flood at Noakhali, Bangladesh")
@@ -55,30 +73,31 @@ donateButton3.addEventListener('click',function(){
     donateFun("BDTAmount3","inputDonate3","Aid for Injured in the Quota Movement")
 });
 
-
+// donation add function
 function donateFun(BDTAmountPara, inputDonatePara, historyTitle){
     const inputDonate = getInputId(inputDonatePara);
     const BDTAmount = getInputId(BDTAmountPara);
     const totalBalance = getInputId("totalBalance");
 
-    // add btn amount
+    
     const totalInputDonate = parseFloat(inputDonate.value);
     const totalBDTAmount = parseFloat(BDTAmount.innerText);
     const totalBalanceValue = parseFloat(totalBalance.innerText);
 
     if(isNaN(totalInputDonate)){
-        alert("Please enter a valid amount");
+        alert("Please give the number");
         return;
     }
     if(totalBalanceValue < totalInputDonate){
-        alert("Please enter a valid amount");
+        alert("There is not enough money in the account");
         return;
     }
     if(totalInputDonate < 0){
-        alert("Please enter a valid amount");
+        alert("Please give positive number");
         return
     }
-    // Model
+
+    // Model add
     my_modal_1.showModal();
 
     const history = getInputId("historyHidden");
@@ -90,20 +109,16 @@ function donateFun(BDTAmountPara, inputDonatePara, historyTitle){
     `
 
 
-
     const addDonate = totalInputDonate + totalBDTAmount;
-    BDTAmount.innerText = addDonate;
+    BDTAmount.innerText = addDonate.toFixed(2);
 
     const losBalance = totalBalanceValue - totalInputDonate;
-    totalBalance.innerText = losBalance;
+    totalBalance.innerText = losBalance.toFixed(2);
     
 }
 
-
+// all id add
 function getInputId(id){
     let value = document.getElementById(id);
     return value;
 }
-
-// pojition problam
-// if else problam acha

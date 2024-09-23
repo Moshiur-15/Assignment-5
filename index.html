@@ -30,29 +30,31 @@
 </head>
 <body class="font-Lexend">
   <!-- header section -->
-    <header class="bg-[#F9F7F3]">
-      <nav class="container mx-auto flex justify-between items-center pt-5 pb-10 md:pb-14 px-5 lg:px-0">
-
-        <button id="blog" class="btn bg-btn_primary md:text-xl font-semibold hidden md:block">Blog</button>
-
-        <div>
-          <div class="flex items-center">
-            <img class="w-[30px] md:w-auto" src="./assets/logo.png" alt="">
-            <p class=" md:text-xl font-semibold md:ml-4">Donate Bangladesh</p>
+    <header class="bg-transparent top-0 sticky" id="Navbar">
+      <div class="bg-[#F9F7F3]" id="Nav">
+        <nav class="container mx-auto flex justify-between items-center pt-5 pb-10 md:pb-10 px-5">
+  
+          <button id="blog" class="btn border-none bg-btn_primary md:text-xl font-semibold hidden md:block">Blog</button>
+  
+          <div>
+            <div class="flex items-center">
+              <img class="w-[30px] md:w-auto" src="./assets/logo.png" alt="">
+              <p class=" md:text-xl font-semibold md:ml-4">Donate Bangladesh</p>
+            </div>
           </div>
-        </div>
-
-        <div class="flex items-center">
-          <img src="./assets/coin.png" alt="">
-          <p class="md:text-xl font-medium ml-4"><span id="totalBalance" class="mr-3 ">10000</span>BDT</p>
-        </div>
-      </nav>    
+  
+          <div class="flex items-center">
+            <img src="./assets/coin.png" alt="">
+            <p class="md:text-xl font-medium ml-4"><span id="totalBalance" class="mr-3 ">10000</span>BDT</p>
+          </div>
+        </nav>    
+      </div>
+      <!-- donation / history button -->
+      <div class="flex justify-center py-5 md:py-10">
+        <button id="donation-btn" class="bg-btn_primary py-3 px-7 rounded-lg  mr-4 md:text-xl font-semibold">Donation</button>
+        <button id="history-btn" class="py-3 px-7 rounded-lg border border-gray-200 md:text-xl font-semibold">History</button>
+      </div>
     </header>
-    <!-- donation / history button -->
-    <div class="flex justify-center mt-10 mb-5 md:mt-20 md:mb-7">
-      <button id="donation-btn" class="bg-btn_primary py-3 px-7 rounded-lg  mr-4 md:text-xl font-semibold">Donation</button>
-      <button id="history-btn" class="py-3 px-7 rounded-lg border border-gray-400 md:text-xl font-semibold">History</button>
-    </div>
 
     <!-- main section -->
     <main id="main" class="container mx-auto space-y-5">
@@ -84,19 +86,18 @@
             <div class="card-actions mt-5">
               <button id="donate-button" class="btn bg-btn_primary w-full md:text-xl font-semibold">Donate Now</button>
             </div>
-
-                <dialog id="my_modal_1" class="modal">
-                  <div class="modal-box">
-                    <h3 class="text-lg font-bold">Hello!</h3>
-                    <p class="py-4">Press ESC key or click the button below to close</p>
-                    <div class="modal-action">
-                      <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Close</button>
-                      </form>
-                    </div>
+            <!-- Modal -->
+            <dialog id="my_modal_1" class="modal">
+                  <div class="modal-box text-center">
+                    <h3 class="text-2xl md:text-4xl font-bold mb-3">Congrates!</h3>                   
+                    <img class="mx-auto" src="./assets/coin.png" alt="">                   
+                    <p class="py-5 font-normal">You Have Donated For Humankind</p>
+                    <h4 class="text-xl md:text-3xl font-bold mb-8">Successfully</h4>
+                    <form method="dialog">
+                      <button class="btn">close confirmation</button>
+                    </form>
                   </div>
-                </dialog>         
+            </dialog>         
 
           </div>
         </div>
@@ -170,13 +171,12 @@
     </main>
     <!-- section -->
     <section class="mx-5">
-        <div id="historyHidden" class="container lg:mx-auto rounded-xl">
+        <div id="historyHidden" class="hidden container lg:mx-auto rounded-xl">
           
         </div>
     </section>
 
     
     <script src="./js/script.js"></script>
-    <script src="./js/test.js"></script>
 </body>
 </html>
