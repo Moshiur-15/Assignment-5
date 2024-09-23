@@ -84,17 +84,14 @@ function donateFun(BDTAmountPara, inputDonatePara, historyTitle){
 
     if(isNaN(totalInputDonate)){
         alert("Please give the number");
-        inputDonate.value = " "
         return;
     }
     if(totalBalanceValue < totalInputDonate){
         alert("There is not enough money in the account");
-        inputDonate.value = " "
         return;
     }
     if(totalInputDonate < 0){
         alert("Please give positive number");
-        inputDonate.value = " "
         return
     }
 
@@ -115,8 +112,6 @@ function donateFun(BDTAmountPara, inputDonatePara, historyTitle){
 
     const losBalance = totalBalanceValue - totalInputDonate;
     totalBalance.innerText = losBalance.toFixed(2);
-
-    inputDonate.value = " "
     
 }
 
